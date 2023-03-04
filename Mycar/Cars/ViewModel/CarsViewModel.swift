@@ -10,9 +10,13 @@ import SwiftUI
 
 class CarsViewModel: ObservableObject {
     
-    @Published var carsArray: [CarsModel] = []
+    @Published var cars = [CarsModel]()
     @Published var isLoading: Bool = false
     @Published var detailCar: [String] = []
+    @Published var brand: String = ""
+    @Published var model: String = ""
+    @Published var description: String = ""
+    @Published var year: String = ""
     static var shared: CarsViewModel = CarsViewModel()
     
     init() {
@@ -27,17 +31,32 @@ class CarsViewModel: ObservableObject {
         isLoading = true
         
         DispatchQueue.main.asyncAfter(deadline: .now() + 2){
-            self.carsArray.append(cars1)
-            self.carsArray.append(cars2)
-            self.carsArray.append(cars3)
+            self.cars.append(cars1)
+            self.cars.append(cars2)
+            self.cars.append(cars3)
             self.isLoading = false
         }
 
         
     }
     
-    func deleteCar(index: IndexSet) {
-        carsArray.remove(atOffsets: index)
+    func addCar(brand: String, model: String, description: String, year: String) {
+        let newCar = CarsModel(brand: brand, model: model, description: description, year: year)
+        cars.append(newCar)
+    }
+    
+    func deleterawCar(index: IndexSet) {
+        cars.remove(atOffsets: index)
+    }
+    
+    func deleteCar(car: CarsModel) {
+        cars.removeAll(where: { $0.id == car.id })
+    }
+    
+    func updateCar(car: CarsModel) {
+        if let index = cars.firstIndex(where: { $0.id == car.id}) {
+            cars[index] = car
+        }
     }
     
     func move(indexSet: IndexSet, newOffset: Int) {

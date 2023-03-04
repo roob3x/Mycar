@@ -9,53 +9,86 @@
 
     struct CarsView: View {
         @ObservedObject var viewModel: CarsViewModel
-        @Environment(\.presentationMode) var presentationMode
-        @State var isSelected = false
-        
+        @State private var showDetail = false
 
         var body: some View {
-
             NavigationView {
                 List{
                     if viewModel.isLoading {
                         ProgressView()
                     }
                     else {
-                        ForEach(viewModel.carsArray) { cars in
+                        ForEach(viewModel.cars) { cars in
                             HStack{
-                                NavigationLink("\(cars.model)", destination: DetailScreen, isActive: $isSelected)
-                                        .font(.headline)
-                                        .onTapGesture {
-                                            viewModel.detailCar.append(cars.brand)
-                                            viewModel.detailCar.append(cars.model)
-                                            viewModel.detailCar.append(cars.description)
-                                            viewModel.detailCar.append(cars.year)
-                                            isSelected.toggle()
-                                        }
+                                CarRow(car: cars, onUpdate: viewModel.updateCar)
                             }
                         }
-                        .onDelete(perform: viewModel.deleteCar)
+                        .onDelete(perform: viewModel.deleterawCar)
                     }
                 }
                 .listStyle(GroupedListStyle())
                 .navigationTitle("Meus Carros")
-                .navigationBarItems(leading: EditButton(), trailing: Button("Add", action: {
-                    viewModel.carsArray.append(CarsModel(brand: "Volkswagen", model: "Polo", description: "Highline 1.0 TURBO", year: "2018"))
+                .navigationBarItems(leading: EditButton(), trailing: NavigationLink(destination: newCarScreen, isActive: $showDetail, label: {
+                    Text("Add")
                 }))
             }
         }
     }
 
+
+struct CarRow: View {
+    let car: CarsModel
+    let onUpdate: (CarsModel) -> Void
+    @State var isSelected = false
+    var body: some View {
+        HStack {
+            Spacer()
+            NavigationLink("\(car.model)", destination: DetailScreen(car: car), isActive: $isSelected)
+                .onTapGesture {
+                    isSelected.toggle()
+            }
+
+        }
+    }
+}
+
 extension CarsView {
-    var DetailScreen: some View {
+    var newCarScreen: some View {
         NavigationView {
-            List {
-                Section(header: Text("Detalhe")) {
-                    ForEach(viewModel.detailCar, id: \.self) { detail in
-                        Text(detail.capitalized)
+            Form {
+                TextField("Marca", text: $viewModel.brand)
+                TextField("Modelo", text: $viewModel.model)
+                TextField("Versao", text: $viewModel.description)
+                TextField("Ano Modelo", text: $viewModel.year)
+                Button(action: {
+                    viewModel.addCar(brand: viewModel.brand, model: viewModel.model, description: viewModel.description, year: viewModel.year)
+                    viewModel.brand = ""
+                    viewModel.model = ""
+                    viewModel.description = ""
+                    viewModel.year = ""
+                    showDetail = false
+                }, label: {
+                    Text("Cadastrar novo Carro")
+                })
+            }
+        }
+        
+    }
+}
+
+struct DetailScreen: View {
+    @Environment(\.presentationMode) var presentationMode
+    let car: CarsModel
+    var body: some View {
+        NavigationView {
+                List {
+                    Section(header: Text("Detalhe")) {
+                        Text(car.brand)
+                        Text(car.model)
+                        Text(car.description)
+                        Text(car.year)
                     }
                 }
-            }
         }
         .listStyle(GroupedListStyle())
         .navigationTitle("Veiculo")
