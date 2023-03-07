@@ -9,7 +9,6 @@
 
     struct CarsView: View {
         @ObservedObject var viewModel: CarsViewModel
-        @State private var showDetail = false
 
         var body: some View {
             NavigationView {
@@ -26,7 +25,7 @@
                 }
                 .listStyle(GroupedListStyle())
                 .navigationTitle("Meus Carros")
-                .navigationBarItems(leading: EditButton(), trailing: NavigationLink(destination: newCarScreen, isActive: $showDetail, label: {
+                .navigationBarItems(leading: EditButton(), trailing: NavigationLink(destination: newCarScreen, isActive: $viewModel.showDetail, label: {
                     Text("Add")
                 }))
             }
@@ -54,26 +53,22 @@ extension CarsView {
         ZStack {
             VStack(spacing: 0) {
                 Form {
-                    TextField("Marca", text: $viewModel.brand)
-                    TextField("Modelo", text: $viewModel.model)
-                    TextField("Versao", text: $viewModel.description)
-                    TextField("Ano Modelo", text: $viewModel.year)
-                    Button(action: {
+                    EditTextView(text: $viewModel.brand, placeholder: "Marca *", keyboard: .alphabet, error: "Marca nao pode ser nulo", failure: viewModel.brand.isEmpty, autocapitalization: .words)
+                    EditTextView(text: $viewModel.model, placeholder: "Modelo *", keyboard: .alphabet, error: "Modelo nao pode ser nulo", failure: viewModel.model.isEmpty, autocapitalization: .words)
+                    EditTextView(text: $viewModel.description, placeholder: "Versao *", keyboard: .alphabet, error: "Versao nao pode ser nulo", failure: viewModel.description.isEmpty, autocapitalization: .words)
+                    EditTextView(text: $viewModel.year, placeholder: "Ano Modelo *", keyboard: .numberPad, error: "Ano nao pode ser nulo", failure: viewModel.year.isEmpty, autocapitalization: .words)
+                    
+                    LoadingButton(action: {
+                        
                         viewModel.addCar(brand: viewModel.brand, model: viewModel.model, description: viewModel.description, year: viewModel.year)
+                        
                         viewModel.brand = ""
                         viewModel.model = ""
                         viewModel.description = ""
                         viewModel.year = ""
-                        showDetail = false
-                    }, label: {
-                        Text("Cadastrar").frame(maxWidth: .infinity, maxHeight: .infinity)
-                            .padding(.vertical, 14)
-                            .padding(.horizontal, 16)
-                            .font(Font.system(.title3).bold())
-                            .background(.black)
-                            .foregroundColor(Color.white)
-                            .cornerRadius(4.0)
-                    })
+                        
+                        
+                    }, text: "Cadastrar", showProgress: self.viewModel.uiState == CarUiState.loading, disabled: viewModel.brand.isEmpty || viewModel.model.isEmpty || viewModel.description.isEmpty || viewModel.year.isEmpty)
                 }
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Cadastro de Veiculo")

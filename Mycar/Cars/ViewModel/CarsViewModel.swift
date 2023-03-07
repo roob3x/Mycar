@@ -17,7 +17,9 @@ class CarsViewModel: ObservableObject {
     @Published var model: String = ""
     @Published var description: String = ""
     @Published var year: String = ""
-    static var shared: CarsViewModel = CarsViewModel()
+    @Published var showDetail = false
+    
+    @Published var uiState: CarUiState = .none
     
     init() {
         getCars()
@@ -41,9 +43,15 @@ class CarsViewModel: ObservableObject {
     }
     
     func addCar(brand: String, model: String, description: String, year: String) {
+        self.uiState = .loading
         let newCar = CarsModel(brand: brand, model: model, description: description, year: year)
-        cars.append(newCar)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.cars.append(newCar)
+            self.showDetail = false
+            self.uiState = .success
+        }
     }
+    
     
     func deleterawCar(index: IndexSet) {
         cars.remove(atOffsets: index)

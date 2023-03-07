@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3857168029B7AB540021662A /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857167F29B7AB540021662A /* EditTextView.swift */; };
+		3857168329B7ADF30021662A /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857168229B7ADF30021662A /* CustomTextFieldStyle.swift */; };
+		3857168529B7B6320021662A /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857168429B7B6320021662A /* LoadingButton.swift */; };
 		385AACF329AE7E0800B45313 /* MycarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AACF229AE7E0800B45313 /* MycarApp.swift */; };
 		385AACF729AE7E0A00B45313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385AACF629AE7E0A00B45313 /* Assets.xcassets */; };
 		385AACFA29AE7E0A00B45313 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385AACF929AE7E0A00B45313 /* Preview Assets.xcassets */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3857167F29B7AB540021662A /* EditTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditTextView.swift; sourceTree = "<group>"; };
+		3857168229B7ADF30021662A /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+		3857168429B7B6320021662A /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
 		385AACEF29AE7E0800B45313 /* Mycar.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mycar.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		385AACF229AE7E0800B45313 /* MycarApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MycarApp.swift; sourceTree = "<group>"; };
 		385AACF629AE7E0A00B45313 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -44,6 +50,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3857167E29B7AB310021662A /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				3857168129B7ADD10021662A /* Style */,
+				3857167F29B7AB540021662A /* EditTextView.swift */,
+				3857168429B7B6320021662A /* LoadingButton.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		3857168129B7ADD10021662A /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				3857168229B7ADF30021662A /* CustomTextFieldStyle.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
 		385AACE629AE7E0800B45313 = {
 			isa = PBXGroup;
 			children = (
@@ -63,6 +87,7 @@
 		385AACF129AE7E0800B45313 /* Mycar */ = {
 			isa = PBXGroup;
 			children = (
+				3857167E29B7AB310021662A /* Common */,
 				385AAD0129AE7E2200B45313 /* Cars */,
 				385AAD0029AE7E1800B45313 /* Splash */,
 				385AACF229AE7E0800B45313 /* MycarApp.swift */,
@@ -223,8 +248,11 @@
 				385AAD0B29AE7F9C00B45313 /* SplashView.swift in Sources */,
 				385AAD1329AE858700B45313 /* CarsViewModel.swift in Sources */,
 				385AAD0D29AE84DB00B45313 /* SplashViewRouter.swift in Sources */,
+				3857168329B7ADF30021662A /* CustomTextFieldStyle.swift in Sources */,
 				385AAD1629AE894700B45313 /* CarsModel.swift in Sources */,
+				3857168529B7B6320021662A /* LoadingButton.swift in Sources */,
 				385AAD1129AE857A00B45313 /* CarsView.swift in Sources */,
+				3857168029B7AB540021662A /* EditTextView.swift in Sources */,
 				385AAD0729AE7F2B00B45313 /* SplashUiState.swift in Sources */,
 				385AAD0929AE7F7000B45313 /* SplashViewModel.swift in Sources */,
 			);

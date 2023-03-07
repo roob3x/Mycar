@@ -14,5 +14,11 @@ struct CarsModel: Identifiable {
     var model: String
     var description: String
     var year: String
+}
 
+enum CarUiState: Equatable {
+    case none
+    case loading
+    case success
+    case error(String)
 }
