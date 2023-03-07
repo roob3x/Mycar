@@ -19,9 +19,7 @@
                     }
                     else {
                         ForEach(viewModel.cars) { cars in
-                            HStack{
-                                CarRow(car: cars, onUpdate: viewModel.updateCar)
-                            }
+                            CarRow(car: cars, onUpdate: viewModel.updateCar)
                         }
                         .onDelete(perform: viewModel.deleterawCar)
                     }
@@ -42,7 +40,6 @@ struct CarRow: View {
     @State var isSelected = false
     var body: some View {
         HStack {
-            Spacer()
             NavigationLink("\(car.model)", destination: DetailScreen(car: car), isActive: $isSelected)
                 .onTapGesture {
                     isSelected.toggle()
@@ -54,50 +51,62 @@ struct CarRow: View {
 
 extension CarsView {
     var newCarScreen: some View {
-        NavigationView {
-            Form {
-                TextField("Marca", text: $viewModel.brand)
-                TextField("Modelo", text: $viewModel.model)
-                TextField("Versao", text: $viewModel.description)
-                TextField("Ano Modelo", text: $viewModel.year)
-                Button(action: {
-                    viewModel.addCar(brand: viewModel.brand, model: viewModel.model, description: viewModel.description, year: viewModel.year)
-                    viewModel.brand = ""
-                    viewModel.model = ""
-                    viewModel.description = ""
-                    viewModel.year = ""
-                    showDetail = false
-                }, label: {
-                    Text("Cadastrar novo Carro")
-                })
+        ZStack {
+            VStack(spacing: 0) {
+                Form {
+                    TextField("Marca", text: $viewModel.brand)
+                    TextField("Modelo", text: $viewModel.model)
+                    TextField("Versao", text: $viewModel.description)
+                    TextField("Ano Modelo", text: $viewModel.year)
+                    Button(action: {
+                        viewModel.addCar(brand: viewModel.brand, model: viewModel.model, description: viewModel.description, year: viewModel.year)
+                        viewModel.brand = ""
+                        viewModel.model = ""
+                        viewModel.description = ""
+                        viewModel.year = ""
+                        showDetail = false
+                    }, label: {
+                        Text("Cadastrar").frame(maxWidth: .infinity, maxHeight: .infinity)
+                            .padding(.vertical, 14)
+                            .padding(.horizontal, 16)
+                            .font(Font.system(.title3).bold())
+                            .background(.black)
+                            .foregroundColor(Color.white)
+                            .cornerRadius(4.0)
+                    })
+                }
+                .listStyle(GroupedListStyle())
+                .navigationBarTitle("Cadastro de Veiculo")
+                .navigationBarTitleDisplayMode(.inline)
             }
+            
         }
         
     }
 }
 
 struct DetailScreen: View {
-    @Environment(\.presentationMode) var presentationMode
     let car: CarsModel
     var body: some View {
-        NavigationView {
+        ZStack(alignment: .trailing) {
+            VStack(spacing: 0) {
                 List {
-                    Section(header: Text("Detalhe")) {
-                        Text(car.brand)
-                        Text(car.model)
-                        Text(car.description)
-                        Text(car.year)
-                    }
+                    Text("Marca: " + car.brand)
+                    Text("Modelo: " + car.model)
+                    Text("Versao: " + car.description)
+                    Text("Ano/Modelo: " + car.year)
                 }
+                .listStyle(GroupedListStyle())
+                .navigationBarTitle("Detalhe do Veiculo")
+                .navigationBarTitleDisplayMode(.inline)
+            }
         }
-        .listStyle(GroupedListStyle())
-        .navigationTitle("Veiculo")
     }
 }
 
 
-    struct HomeView_Previews: PreviewProvider {
-        static var previews: some View {
-            CarsView(viewModel: CarsViewModel())
-        }
+struct HomeView_Previews: PreviewProvider {
+    static var previews: some View {
+        CarsView(viewModel: CarsViewModel())
     }
+}
