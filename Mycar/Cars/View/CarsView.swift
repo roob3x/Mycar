@@ -17,10 +17,36 @@
                         ProgressView()
                     }
                     else {
-                        ForEach(viewModel.cars) { cars in
-                            CarRow(car: cars, onUpdate: viewModel.updateCar)
+                        if viewModel.cars.count == 0 {
+                            
+                            VStack(spacing: 12) {
+                                
+                                Image(systemName: "exclamationmark.octagon.fill")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 60, height: 60, alignment: .center)
+                                
+                                Text("Voce nao possui carros cadastrados :(")
+                            }
+                            .background(.white)
                         }
-                        .onDelete(perform: viewModel.deleterawCar)
+                        else {
+                                ForEach(viewModel.cars) { cars in
+                                    HStack() {
+                                        Image("\(cars.model.lowercased())")
+                                            .resizable()
+                                            .scaledToFit()
+                                            .clipShape(
+                                                Circle()
+                                            ).frame(width: 100, height: 100, alignment: .leading)
+                                        CarRow(car: cars, onUpdate: viewModel.updateCar)
+                                    }
+                                }
+                                .onDelete(perform: viewModel.deleterawCar)
+                                .onMove(perform: { indices, newOffset in
+                                    viewModel.cars.move(fromOffsets: indices, toOffset: newOffset)
+                                })
+                        }
                     }
                 }
                 .listStyle(GroupedListStyle())

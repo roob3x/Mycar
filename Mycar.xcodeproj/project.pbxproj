@@ -10,7 +10,7 @@
 		3857168029B7AB540021662A /* EditTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857167F29B7AB540021662A /* EditTextView.swift */; };
 		3857168329B7ADF30021662A /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857168229B7ADF30021662A /* CustomTextFieldStyle.swift */; };
 		3857168529B7B6320021662A /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3857168429B7B6320021662A /* LoadingButton.swift */; };
-		385AACF329AE7E0800B45313 /* MycarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AACF229AE7E0800B45313 /* MycarApp.swift */; };
+		3857168629B8FCE60021662A /* MycarApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AACF229AE7E0800B45313 /* MycarApp.swift */; };
 		385AACF729AE7E0A00B45313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385AACF629AE7E0A00B45313 /* Assets.xcassets */; };
 		385AACFA29AE7E0A00B45313 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 385AACF929AE7E0A00B45313 /* Preview Assets.xcassets */; };
 		385AAD0729AE7F2B00B45313 /* SplashUiState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AAD0629AE7F2B00B45313 /* SplashUiState.swift */; };
@@ -32,7 +32,7 @@
 		385AACF929AE7E0A00B45313 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		385AAD0629AE7F2B00B45313 /* SplashUiState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashUiState.swift; sourceTree = "<group>"; };
 		385AAD0829AE7F7000B45313 /* SplashViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
-		385AAD0A29AE7F9C00B45313 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		385AAD0A29AE7F9C00B45313 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; wrapsLines = 1; };
 		385AAD0C29AE84DB00B45313 /* SplashViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewRouter.swift; sourceTree = "<group>"; };
 		385AAD1029AE857A00B45313 /* CarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsView.swift; sourceTree = "<group>"; };
 		385AAD1229AE858700B45313 /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
@@ -244,10 +244,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				385AACF329AE7E0800B45313 /* MycarApp.swift in Sources */,
 				385AAD0B29AE7F9C00B45313 /* SplashView.swift in Sources */,
 				385AAD1329AE858700B45313 /* CarsViewModel.swift in Sources */,
 				385AAD0D29AE84DB00B45313 /* SplashViewRouter.swift in Sources */,
+				3857168629B8FCE60021662A /* MycarApp.swift in Sources */,
 				3857168329B7ADF30021662A /* CustomTextFieldStyle.swift in Sources */,
 				385AAD1629AE894700B45313 /* CarsModel.swift in Sources */,
 				3857168529B7B6320021662A /* LoadingButton.swift in Sources */,
@@ -389,6 +389,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -418,6 +419,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

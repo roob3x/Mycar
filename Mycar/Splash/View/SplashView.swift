@@ -27,11 +27,8 @@ struct LoadingView: View {
         ZStack {
             Image("splashCarros")
                 .resizable()
-                .scaledToFit()
-                .frame(maxWidth: .infinity, maxHeight: .infinity)
-                .ignoresSafeArea()
         }
-        .background(.black)
+        .edgesIgnoringSafeArea(.all)
     }
 }
 

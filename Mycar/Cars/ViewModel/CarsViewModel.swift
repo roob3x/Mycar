@@ -29,6 +29,7 @@ class CarsViewModel: ObservableObject {
         let cars1 = CarsModel(brand: "Volkswagen", model: "T-Cross", description: "Comfortline 1.0 200 TSI", year: "2022")
         let cars2 = CarsModel(brand: "FIAT", model: "PULSE", description: "IMPETUS 1.0 TURBO 200", year: "2022")
         let cars3 = CarsModel(brand: "RENUALT", model: "KWID", description: "1.0", year: "2019")
+        
 
         isLoading = true
         
@@ -38,8 +39,6 @@ class CarsViewModel: ObservableObject {
             self.cars.append(cars3)
             self.isLoading = false
         }
-
-        
     }
     
     func addCar(brand: String, model: String, description: String, year: String) {

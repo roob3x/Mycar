@@ -24,7 +24,7 @@ struct LoadingButton: View {
                     .padding(.vertical, 14)
                     .padding(.horizontal, 16)
                     .font(Font.system(.title3).bold())
-                    .background(disabled ? Color("lightBlack") : Color.black)
+                    .background(disabled ? Color("lightOrange") : Color.orange)
                     .foregroundColor(Color(.white))
                     .cornerRadius(4.0)
             })
