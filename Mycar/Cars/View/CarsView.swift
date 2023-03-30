@@ -7,7 +7,7 @@
 
     import SwiftUI
 
-    struct CarsView: View {
+struct CarsView: View {
         @ObservedObject var viewModel: CarsViewModel
 
         var body: some View {
@@ -79,10 +79,10 @@ extension CarsView {
         ZStack {
             VStack(spacing: 0) {
                 Form {
-                    EditTextView(text: $viewModel.brand, placeholder: "Marca *", keyboard: .alphabet, error: "Marca nao pode ser nulo", failure: viewModel.brand.isEmpty, autocapitalization: .words)
-                    EditTextView(text: $viewModel.model, placeholder: "Modelo *", keyboard: .alphabet, error: "Modelo nao pode ser nulo", failure: viewModel.model.isEmpty, autocapitalization: .words)
-                    EditTextView(text: $viewModel.description, placeholder: "Versao *", keyboard: .alphabet, error: "Versao nao pode ser nulo", failure: viewModel.description.isEmpty, autocapitalization: .words)
-                    EditTextView(text: $viewModel.year, placeholder: "Ano Modelo *", keyboard: .numberPad, error: "Ano nao pode ser nulo", failure: viewModel.year.isEmpty, autocapitalization: .words)
+                    EditTextView(text: $viewModel.brand, placeholder: "Marca *", keyboard: .alphabet, error: "Por favor, Inserir marca maior que 2 caracteres\n", failure: viewModel.brand.count < 3, autocapitalization: .words)
+                    EditTextView(text: $viewModel.model, placeholder: "Modelo *", keyboard: .alphabet, error: "Por favor, Inserir modelo maior que 2 caracteres\n", failure: viewModel.model.count < 3, autocapitalization: .words)
+                    EditTextView(text: $viewModel.description, placeholder: "Versao *", keyboard: .alphabet, error: "Por favor, Inserir versao maior que 5 caracteres\n", failure: viewModel.description.count < 6, autocapitalization: .words)
+                    EditTextView(text: $viewModel.year, placeholder: "Ano Modelo *", keyboard: .numberPad, error: "Por favor insira ano maior que 1940 ou ate 2024\n", failure: Int(viewModel.year) ?? 0 < 1940 || Int(viewModel.year) ?? 0 > 2024, autocapitalization: .words)
                     
                     LoadingButton(action: {
                         
@@ -94,7 +94,8 @@ extension CarsView {
                         viewModel.year = ""
                         
                         
-                    }, text: "Cadastrar", showProgress: self.viewModel.uiState == CarUiState.loading, disabled: viewModel.brand.isEmpty || viewModel.model.isEmpty || viewModel.description.isEmpty || viewModel.year.isEmpty)
+                    }, text: "Cadastrar", showProgress: self.viewModel.uiState == CarUiState.loading, disabled: viewModel.brand.count < 3 || viewModel.model.count < 3 ||
+                                  viewModel.description.count < 6 || Int(viewModel.year) ?? 0 < 1940 || Int(viewModel.year) ?? 0 > 2024)
                 }
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Cadastro de Veiculo")
@@ -126,7 +127,7 @@ struct DetailScreen: View {
 }
 
 
-struct HomeView_Previews: PreviewProvider {
+struct CarsView_Previews: PreviewProvider {
     static var previews: some View {
         CarsView(viewModel: CarsViewModel())
     }

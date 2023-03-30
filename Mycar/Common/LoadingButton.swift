@@ -40,7 +40,6 @@ struct LoadingButton: View {
 struct LoadingButton_Previews: PreviewProvider {
     static var previews: some View {
         LoadingButton(action: {
-            print("Ola mundo")
         }, text: "Cadastrar", showProgress: true, disabled: true)
     }
 }

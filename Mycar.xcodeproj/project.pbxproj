@@ -20,6 +20,25 @@
 		385AAD1129AE857A00B45313 /* CarsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AAD1029AE857A00B45313 /* CarsView.swift */; };
 		385AAD1329AE858700B45313 /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AAD1229AE858700B45313 /* CarsViewModel.swift */; };
 		385AAD1629AE894700B45313 /* CarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AAD1529AE894700B45313 /* CarsModel.swift */; };
+		387D7A2C29C499E900F91887 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A2B29C499E900F91887 /* WebService.swift */; };
+		387D7A2F29C49E8700F91887 /* CarRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A2E29C49E8700F91887 /* CarRemoteDataSource.swift */; };
+		387D7A3129C4A08500F91887 /* BrandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3029C4A08500F91887 /* BrandResponse.swift */; };
+		387D7A3429C4A13400F91887 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3329C4A13400F91887 /* AppError.swift */; };
+		387D7A3629C4A1E600F91887 /* CarInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3529C4A1E600F91887 /* CarInterector.swift */; };
+		387D7A3A29C4EC3800F91887 /* BrandViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3929C4EC3800F91887 /* BrandViewModel.swift */; };
+		387D7A3C29C6053D00F91887 /* ModelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3B29C6053D00F91887 /* ModelViewModel.swift */; };
+		387D7A3E29C60DF300F91887 /* ModelResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3D29C60DF300F91887 /* ModelResponse.swift */; };
+		387D7A4129C72ACF00F91887 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A4029C72ACF00F91887 /* String+Extensions.swift */; };
+		38DFF67C29CCCA30009EC28C /* YearResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF67B29CCCA30009EC28C /* YearResponse.swift */; };
+		38DFF67E29CCCA55009EC28C /* YearViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF67D29CCCA55009EC28C /* YearViewModel.swift */; };
+		38DFF68029CCE608009EC28C /* DescriptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF67F29CCE608009EC28C /* DescriptResponse.swift */; };
+		38DFF68229CCE6C5009EC28C /* DescriptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF68129CCE6C5009EC28C /* DescriptViewModel.swift */; };
+		38DFF68829D606D9009EC28C /* FipeSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF68729D606D9009EC28C /* FipeSearchViewModel.swift */; };
+		38DFF68A29D6076B009EC28C /* FipeSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF68929D6076B009EC28C /* FipeSearchModel.swift */; };
+		38DFF68C29D609D2009EC28C /* FipeSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF68B29D609D2009EC28C /* FipeSearchView.swift */; };
+		38DFF68E29D60DE3009EC28C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF68D29D60DE3009EC28C /* HomeView.swift */; };
+		38DFF69029D60E8C009EC28C /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF68F29D60E8C009EC28C /* HomeViewModel.swift */; };
+		38DFF69229D613CB009EC28C /* HomeViewRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DFF69129D613CB009EC28C /* HomeViewRouter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +56,25 @@
 		385AAD1029AE857A00B45313 /* CarsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsView.swift; sourceTree = "<group>"; };
 		385AAD1229AE858700B45313 /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
 		385AAD1529AE894700B45313 /* CarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsModel.swift; sourceTree = "<group>"; };
+		387D7A2B29C499E900F91887 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
+		387D7A2E29C49E8700F91887 /* CarRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRemoteDataSource.swift; sourceTree = "<group>"; };
+		387D7A3029C4A08500F91887 /* BrandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandResponse.swift; sourceTree = "<group>"; };
+		387D7A3329C4A13400F91887 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
+		387D7A3529C4A1E600F91887 /* CarInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInterector.swift; sourceTree = "<group>"; };
+		387D7A3929C4EC3800F91887 /* BrandViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandViewModel.swift; sourceTree = "<group>"; };
+		387D7A3B29C6053D00F91887 /* ModelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelViewModel.swift; sourceTree = "<group>"; };
+		387D7A3D29C60DF300F91887 /* ModelResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelResponse.swift; sourceTree = "<group>"; };
+		387D7A4029C72ACF00F91887 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		38DFF67B29CCCA30009EC28C /* YearResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearResponse.swift; sourceTree = "<group>"; };
+		38DFF67D29CCCA55009EC28C /* YearViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YearViewModel.swift; sourceTree = "<group>"; };
+		38DFF67F29CCE608009EC28C /* DescriptResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptResponse.swift; sourceTree = "<group>"; };
+		38DFF68129CCE6C5009EC28C /* DescriptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DescriptViewModel.swift; sourceTree = "<group>"; };
+		38DFF68729D606D9009EC28C /* FipeSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipeSearchViewModel.swift; sourceTree = "<group>"; };
+		38DFF68929D6076B009EC28C /* FipeSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipeSearchModel.swift; sourceTree = "<group>"; };
+		38DFF68B29D609D2009EC28C /* FipeSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipeSearchView.swift; sourceTree = "<group>"; };
+		38DFF68D29D60DE3009EC28C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		38DFF68F29D60E8C009EC28C /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		38DFF69129D613CB009EC28C /* HomeViewRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewRouter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +91,9 @@
 		3857167E29B7AB310021662A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				387D7A3F29C72AA400F91887 /* Lang */,
+				387D7A3229C4A12500F91887 /* Model */,
+				387D7A2A29C499BD00F91887 /* Network */,
 				3857168129B7ADD10021662A /* Style */,
 				3857167F29B7AB540021662A /* EditTextView.swift */,
 				3857168429B7B6320021662A /* LoadingButton.swift */,
@@ -87,6 +128,8 @@
 		385AACF129AE7E0800B45313 /* Mycar */ = {
 			isa = PBXGroup;
 			children = (
+				38DFF68329D60626009EC28C /* FipeSearch */,
+				387D7A2429C48FBF00F91887 /* Home */,
 				3857167E29B7AB310021662A /* Common */,
 				385AAD0129AE7E2200B45313 /* Cars */,
 				385AAD0029AE7E1800B45313 /* Splash */,
@@ -174,6 +217,116 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		387D7A2429C48FBF00F91887 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				387D7A2729C4914400F91887 /* Model */,
+				387D7A2629C4913300F91887 /* ViewModel */,
+				387D7A2529C4912C00F91887 /* View */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		387D7A2529C4912C00F91887 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38DFF68D29D60DE3009EC28C /* HomeView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		387D7A2629C4913300F91887 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				38DFF68F29D60E8C009EC28C /* HomeViewModel.swift */,
+				38DFF69129D613CB009EC28C /* HomeViewRouter.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		387D7A2729C4914400F91887 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		387D7A2A29C499BD00F91887 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				387D7A2B29C499E900F91887 /* WebService.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		387D7A2D29C49E6A00F91887 /* Interector */ = {
+			isa = PBXGroup;
+			children = (
+				387D7A2E29C49E8700F91887 /* CarRemoteDataSource.swift */,
+				387D7A3529C4A1E600F91887 /* CarInterector.swift */,
+			);
+			path = Interector;
+			sourceTree = "<group>";
+		};
+		387D7A3229C4A12500F91887 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				387D7A3329C4A13400F91887 /* AppError.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		387D7A3F29C72AA400F91887 /* Lang */ = {
+			isa = PBXGroup;
+			children = (
+				387D7A4029C72ACF00F91887 /* String+Extensions.swift */,
+			);
+			path = Lang;
+			sourceTree = "<group>";
+		};
+		38DFF68329D60626009EC28C /* FipeSearch */ = {
+			isa = PBXGroup;
+			children = (
+				387D7A2D29C49E6A00F91887 /* Interector */,
+				38DFF68629D60660009EC28C /* View */,
+				38DFF68529D6065A009EC28C /* ViewModel */,
+				38DFF68429D60654009EC28C /* Model */,
+			);
+			path = FipeSearch;
+			sourceTree = "<group>";
+		};
+		38DFF68429D60654009EC28C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				387D7A3029C4A08500F91887 /* BrandResponse.swift */,
+				387D7A3D29C60DF300F91887 /* ModelResponse.swift */,
+				38DFF67B29CCCA30009EC28C /* YearResponse.swift */,
+				38DFF67F29CCE608009EC28C /* DescriptResponse.swift */,
+				38DFF68929D6076B009EC28C /* FipeSearchModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		38DFF68529D6065A009EC28C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				387D7A3929C4EC3800F91887 /* BrandViewModel.swift */,
+				387D7A3B29C6053D00F91887 /* ModelViewModel.swift */,
+				38DFF67D29CCCA55009EC28C /* YearViewModel.swift */,
+				38DFF68129CCE6C5009EC28C /* DescriptViewModel.swift */,
+				38DFF68729D606D9009EC28C /* FipeSearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		38DFF68629D60660009EC28C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				38DFF68B29D609D2009EC28C /* FipeSearchView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,17 +397,36 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DFF68829D606D9009EC28C /* FipeSearchViewModel.swift in Sources */,
+				38DFF68E29D60DE3009EC28C /* HomeView.swift in Sources */,
+				387D7A2C29C499E900F91887 /* WebService.swift in Sources */,
+				387D7A4129C72ACF00F91887 /* String+Extensions.swift in Sources */,
 				385AAD0B29AE7F9C00B45313 /* SplashView.swift in Sources */,
 				385AAD1329AE858700B45313 /* CarsViewModel.swift in Sources */,
+				387D7A3129C4A08500F91887 /* BrandResponse.swift in Sources */,
+				387D7A3429C4A13400F91887 /* AppError.swift in Sources */,
+				387D7A3629C4A1E600F91887 /* CarInterector.swift in Sources */,
+				38DFF68A29D6076B009EC28C /* FipeSearchModel.swift in Sources */,
+				387D7A2F29C49E8700F91887 /* CarRemoteDataSource.swift in Sources */,
+				38DFF68229CCE6C5009EC28C /* DescriptViewModel.swift in Sources */,
 				385AAD0D29AE84DB00B45313 /* SplashViewRouter.swift in Sources */,
 				3857168629B8FCE60021662A /* MycarApp.swift in Sources */,
 				3857168329B7ADF30021662A /* CustomTextFieldStyle.swift in Sources */,
+				38DFF69029D60E8C009EC28C /* HomeViewModel.swift in Sources */,
 				385AAD1629AE894700B45313 /* CarsModel.swift in Sources */,
 				3857168529B7B6320021662A /* LoadingButton.swift in Sources */,
+				387D7A3C29C6053D00F91887 /* ModelViewModel.swift in Sources */,
+				38DFF68029CCE608009EC28C /* DescriptResponse.swift in Sources */,
+				38DFF69229D613CB009EC28C /* HomeViewRouter.swift in Sources */,
+				38DFF67E29CCCA55009EC28C /* YearViewModel.swift in Sources */,
+				387D7A3A29C4EC3800F91887 /* BrandViewModel.swift in Sources */,
 				385AAD1129AE857A00B45313 /* CarsView.swift in Sources */,
 				3857168029B7AB540021662A /* EditTextView.swift in Sources */,
 				385AAD0729AE7F2B00B45313 /* SplashUiState.swift in Sources */,
+				38DFF68C29D609D2009EC28C /* FipeSearchView.swift in Sources */,
+				387D7A3E29C60DF300F91887 /* ModelResponse.swift in Sources */,
 				385AAD0929AE7F7000B45313 /* SplashViewModel.swift in Sources */,
+				38DFF67C29CCCA30009EC28C /* YearResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

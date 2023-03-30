@@ -11,6 +11,8 @@ import SwiftUI
 class SplashViewModel: ObservableObject {
     
     @Published var uiState: SplashUiState = .loading
+    var id: Int = 0
+    var yearId: String = ""
     
     init () {
         
@@ -26,6 +28,6 @@ class SplashViewModel: ObservableObject {
 
 extension SplashViewModel {
     func homeView() -> some View {
-        return SplashViewRouter.makeCarsView()
+        return SplashViewRouter.makeHomeView()
     }
 }
