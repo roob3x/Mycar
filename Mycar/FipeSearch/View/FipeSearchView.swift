@@ -42,6 +42,26 @@ struct FipeSearchView: View {
                             }
                         }.onAppear(perform: viewModel.onAppearDescription)
                     }
+                
+                VStack {
+                    HStack {
+                        Text("Codigo Fipe: ")
+                        Spacer()
+                        if case let FipeSearchUiState.fullListDescription(descriptions) = viewModel.uiStateDescription {
+                                ForEach(descriptions, id: \.id) { description in
+                                    if viewModel.selectedModelOption.isEmpty || viewModel.selectedYearOption.isEmpty {
+                                                    Text("")
+                                    }
+                                    else {
+                                        Text(description.fipe)
+                                            .disabled(true)
+                                            .foregroundColor(Color.gray)
+                                            .multilineTextAlignment(.trailing)
+                                    }
+                                }
+                            }
+                    }
+                }
                     
                     VStack {
                         HStack {
@@ -62,6 +82,7 @@ struct FipeSearchView: View {
                                 }
                         }
                     }
+
                     
                     VStack {
                         HStack {
@@ -84,7 +105,7 @@ struct FipeSearchView: View {
                     }
             }
             .listStyle(GroupedListStyle())
-            .navigationTitle("Preco Fipe")
+            .navigationTitle("Consulta Tabela Fipe")
         }
     }
 }

@@ -9,7 +9,7 @@ import Foundation
 import Combine
 
 class CarInterector {
-    private let remote: CarRemoteDataSource = .shared
+    private let remote: FipeRemoteDataSource = .shared
 }
 
 extension CarInterector {

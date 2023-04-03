@@ -8,8 +8,8 @@
 import Foundation
 import Combine
 
-class CarRemoteDataSource {
-    static var shared: CarRemoteDataSource = CarRemoteDataSource()
+class FipeRemoteDataSource {
+    static var shared: FipeRemoteDataSource = FipeRemoteDataSource()
     
     private init () {
         

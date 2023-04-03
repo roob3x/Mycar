@@ -15,9 +15,6 @@ enum HomeViewRouter {
     }
     
     static func makeFipeSearchView(viewModel: FipeSerachViewModel) -> some View {
-//        return CarsView(viewModel: CarsViewModel())
-//        return CarsView(viewModel: CarsViewModel(brandId: id, modelId: id, yearId: yearId, interector: CarInterector()))
-//        return FipeSearchView(viewModel: FipeSerachViewModel(brandId: id, modelId: id, yearId: yearId, interector: CarInterector()))
         return FipeSearchView(viewModel: viewModel)
     }
     

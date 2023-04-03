@@ -11,15 +11,13 @@ import SwiftUI
 class SplashViewModel: ObservableObject {
     
     @Published var uiState: SplashUiState = .loading
-    var id: Int = 0
-    var yearId: String = ""
     
     init () {
         
     }
     
     func onAppear() {
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.uiState = .goToHome
         }
     }

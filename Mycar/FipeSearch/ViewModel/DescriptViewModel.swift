@@ -15,7 +15,7 @@ struct DescriptViewModel: Identifiable, Equatable {
 //    var model: String = ""
 //    var year: Int
 //    var fuel: String = ""
-//    var fipe: String = ""
+    var fipe: String = ""
     var valueref: String = ""
 //    var abbreviationfuel: String = ""
      

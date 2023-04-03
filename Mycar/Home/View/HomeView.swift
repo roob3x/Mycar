@@ -25,7 +25,7 @@ struct HomeView: View {
                 }.tag(1)
         }
         .background(Color.white)
-        .accentColor(Color.orange)
+        .accentColor(Color.blue)
     }
 }
 

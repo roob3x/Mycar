@@ -97,6 +97,9 @@ class FipeSerachViewModel:  ObservableObject {
     
     func onAppearYear() {
         if !selectedModelOption.isEmpty {
+            if modelId != Int(selectedModelOption) {
+                selectedYearOption = ""
+            }
             modelId = Int(selectedModelOption) ?? 0
             cancellableYearRequest = interector.fetchYear(modelId: modelId, brandId: brandId)
                 .receive(on: DispatchQueue.main)
@@ -132,9 +135,10 @@ class FipeSerachViewModel:  ObservableObject {
                     break
                 }
             }, receiveValue: { response in
-                let viewModel = DescriptViewModel(id: response.codigo,
-                                                               price: response.price,
-                                                                valueref: response.valueref)
+//                let viewModel = DescriptViewModel(id: response.codigo,
+//                                                               price: response.price,
+//                                                                valueref: response.valueref)
+                let viewModel = DescriptViewModel(id: response.codigo, price: response.price, fipe: response.fipe, valueref: response.valueref)
                 self.uiStateDescription = .fullListDescription([viewModel])
             })
         }

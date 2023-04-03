@@ -21,7 +21,7 @@
 		385AAD1329AE858700B45313 /* CarsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AAD1229AE858700B45313 /* CarsViewModel.swift */; };
 		385AAD1629AE894700B45313 /* CarsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 385AAD1529AE894700B45313 /* CarsModel.swift */; };
 		387D7A2C29C499E900F91887 /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A2B29C499E900F91887 /* WebService.swift */; };
-		387D7A2F29C49E8700F91887 /* CarRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A2E29C49E8700F91887 /* CarRemoteDataSource.swift */; };
+		387D7A2F29C49E8700F91887 /* FipeRemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A2E29C49E8700F91887 /* FipeRemoteDataSource.swift */; };
 		387D7A3129C4A08500F91887 /* BrandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3029C4A08500F91887 /* BrandResponse.swift */; };
 		387D7A3429C4A13400F91887 /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3329C4A13400F91887 /* AppError.swift */; };
 		387D7A3629C4A1E600F91887 /* CarInterector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 387D7A3529C4A1E600F91887 /* CarInterector.swift */; };
@@ -57,7 +57,7 @@
 		385AAD1229AE858700B45313 /* CarsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsViewModel.swift; sourceTree = "<group>"; };
 		385AAD1529AE894700B45313 /* CarsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarsModel.swift; sourceTree = "<group>"; };
 		387D7A2B29C499E900F91887 /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
-		387D7A2E29C49E8700F91887 /* CarRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarRemoteDataSource.swift; sourceTree = "<group>"; };
+		387D7A2E29C49E8700F91887 /* FipeRemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FipeRemoteDataSource.swift; sourceTree = "<group>"; };
 		387D7A3029C4A08500F91887 /* BrandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandResponse.swift; sourceTree = "<group>"; };
 		387D7A3329C4A13400F91887 /* AppError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		387D7A3529C4A1E600F91887 /* CarInterector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarInterector.swift; sourceTree = "<group>"; };
@@ -262,7 +262,7 @@
 		387D7A2D29C49E6A00F91887 /* Interector */ = {
 			isa = PBXGroup;
 			children = (
-				387D7A2E29C49E8700F91887 /* CarRemoteDataSource.swift */,
+				387D7A2E29C49E8700F91887 /* FipeRemoteDataSource.swift */,
 				387D7A3529C4A1E600F91887 /* CarInterector.swift */,
 			);
 			path = Interector;
@@ -407,7 +407,7 @@
 				387D7A3429C4A13400F91887 /* AppError.swift in Sources */,
 				387D7A3629C4A1E600F91887 /* CarInterector.swift in Sources */,
 				38DFF68A29D6076B009EC28C /* FipeSearchModel.swift in Sources */,
-				387D7A2F29C49E8700F91887 /* CarRemoteDataSource.swift in Sources */,
+				387D7A2F29C49E8700F91887 /* FipeRemoteDataSource.swift in Sources */,
 				38DFF68229CCE6C5009EC28C /* DescriptViewModel.swift in Sources */,
 				385AAD0D29AE84DB00B45313 /* SplashViewRouter.swift in Sources */,
 				3857168629B8FCE60021662A /* MycarApp.swift in Sources */,
