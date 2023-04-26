@@ -17,6 +17,7 @@ struct FipeSearchView: View {
                             Picker("Marca:", selection: $viewModel.selectedBrandOption) {
                                 ForEach(brands) { brand in
                                     Text("\(brand.nome)")
+                                        .accessibilityIdentifier("brandfipeText")
                                 }
                             }
                             .onAppear(perform: viewModel.onAppearModel)
@@ -28,6 +29,7 @@ struct FipeSearchView: View {
                                 if case let FipeSearchUiState.fullListModel(models) = viewModel.uiStateModel {
                                     ForEach(models) { model in
                                         Text("\(model.nome)")
+                                            .accessibilityIdentifier("modelText")
                                     }
                                 }
                             }.onAppear(perform: viewModel.onAppearYear)
@@ -38,6 +40,7 @@ struct FipeSearchView: View {
                                 if case let FipeSearchUiState.fullListYear(years) = viewModel.uiStateYear {
                                 ForEach(years) { year in
                                     Text(year.nome)
+                                        .accessibilityIdentifier("fuelText")
                                 }
                             }
                         }.onAppear(perform: viewModel.onAppearDescription)
@@ -57,6 +60,7 @@ struct FipeSearchView: View {
                                             .disabled(true)
                                             .foregroundColor(Color.gray)
                                             .multilineTextAlignment(.trailing)
+                                            .accessibilityIdentifier("codigofipeText")
                                     }
                                 }
                             }
@@ -77,6 +81,7 @@ struct FipeSearchView: View {
                                                 .disabled(true)
                                                 .foregroundColor(Color.gray)
                                                 .multilineTextAlignment(.trailing)
+                                                .accessibilityIdentifier("valueText")
                                         }
                                     }
                                 }
@@ -98,6 +103,7 @@ struct FipeSearchView: View {
                                                 .disabled(true)
                                                 .foregroundColor(Color.green)
                                                 .multilineTextAlignment(.trailing)
+                                                .accessibilityIdentifier("refText")
                                         }
                                     }
                                 }

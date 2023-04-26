@@ -113,10 +113,10 @@ struct DetailScreen: View {
         ZStack(alignment: .trailing) {
             VStack(spacing: 0) {
                 List {
-                    Text("Marca: " + car.brand)
-                    Text("Modelo: " + car.model)
-                    Text("Versao: " + car.description)
-                    Text("Ano/Modelo: " + car.year)
+                    Text("Marca: " + car.brand).accessibilityIdentifier("brandText")
+                    Text("Modelo: " + car.model).accessibilityIdentifier("modelText")
+                    Text("Versao: " + car.description).accessibilityIdentifier("descriptionText")
+                    Text("Ano/Modelo: " + car.year).accessibilityIdentifier("yearText")
                 }
                 .listStyle(GroupedListStyle())
                 .navigationBarTitle("Detalhe do Veiculo")
